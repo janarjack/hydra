@@ -1,0 +1,400 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logout {
+  position: absolute;
+  top: 11%;
+  right: 2rem;
+  height: 2rem;
+  width: 8.6rem;
+  font-weight: bold;
+  color: #909090;
+  background-color: #e5e5e5;
+  border-radius: 16px;
+  border-style: none;
+}
+
+.warning-bg {
+  background-color: #ff91a4 !important;
+}
+
+.cropListCard {
+  position: relative;
+  width: 180px;
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 230px !important;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cropListCardBg1 {
+  background-color: #c8e3e3;
+}
+
+.cropListCardBg2 {
+  background-color: #f3dbc7;
+}
+
+.cropListCardBg3 {
+  background-color: #f0e2e3;
+}
+
+.cropListCardBg4 {
+  background-color: #c2d6bd;
+}
+
+.viewCropImgDiv {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.viewCropImg {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.cropListCardValDiv {
+  position: relative;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.cropListCardValTbl {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.cropListCardValTr {
+  width: 100%;
+}
+
+.cropListCardValTd {
+  text-align: left;
+  position: relative;
+  padding-left: 10px;
+  color: #343a3f;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  width: 50%;
+  word-break: break-all;
+}
+
+.crop-list-btn {
+  background-color: #e3eff3;
+  color: #909090;
+  font-size: 14px;
+  line-height: 19.2px;
+  font-family: 'Mukta-SemiBold';
+  border-radius: 50px;
+  position: relative;
+  width: 70%;
+  height: 30px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 15%;
+  box-shadow: none;
+  border: none;
+}
+
+.crop-list-btn:hover {
+  background-color: #92de8b;
+  color: #fff;
+}
+
+.crop-growth-btn {
+  background-color: #92de8b;
+  color: #909090;
+  font-family: 'Mukta-SemiBold';
+  border-radius: 50px;
+  position: relative;
+  height: 30px;
+  width: 100%;
+  padding-top: 2%;
+  padding-left: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.crop-growth-btn:hover {
+  opacity: .8;
+}
+
+.btn-hover:hover {
+  opacity: .8;
+  color: #fff !important;
+  border-color: #ccc;
+}
+
+.crop-growth-card-margin {
+  margin-top: 10%;
+}
+
+.CropDtlsBg {
+  background-color: #f3dbc7;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.flex-child:first-child {
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.flex-container-outer {
+  display: flex;
+}
+
+.flex-container-inner {
+  display: flex;
+}
+
+.flex-container-role {
+  display: flex;
+}
+
+.crop-list-margin {
+  margin-left: 70px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.crop-list-margin-no {
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 65px;
+}
+
+.notifications-margin-no {
+  margin-top: 50px;
+}
+
+.growth-margin-no {
+  margin-left: 65px;
+  width: 600px;
+  height: 300px;
+}
+
+.plant-list-margin {
+  margin-top: 24px;
+  width: 110%;
+}
+
+@media (max-width: 760px) {
+  .plant-list-margin-no {
+    max-height: 520px;
+    overflow-y: auto;
+  }
+  .viewCropImg {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .progressBarImg{
+    position: relative;
+    width: 95%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 570px) {
+  #styled-burger {
+    display: none;
+  }
+}
+
+@media (max-width: 570px) {
+  .formObj {
+    padding-top: 120px;
+  }
+  .createButtonDiv a:link,
+  a:visited {
+    top: 92px;
+    right: 5%;
+  }
+  .ReactTable {
+    top: 3rem;
+  }
+  .rt-th {
+    max-width: 30% !important;
+  }
+  .login-btn {
+    position: relative;
+    margin-left: 18px;
+  }
+  .crop-list-btn {
+    width: 70%;
+  }
+
+  .crop-growth-btn {
+    width: 100%;
+  }
+  .crop-list-margin-no {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .flex-container-outer {
+    display: block;
+  }
+
+  .flex-container-inner {
+    display: block;
+  }
+
+  .cropListCard {
+    margin-right: 0 !important;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cropListCardValTd {
+    padding-right: 20px;
+    width: 50%;
+  }
+
+  .viewCropImgDiv {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+label {
+  width: 100%;
+}
+
+.card-input-element {
+  display: none;
+}
+
+.card-input {
+  margin: 20px;
+  padding: 00px;
+  text-align: center;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+  /* font-weight: bold; */
+  font-size: 14px;
+}
+
+.empty-crop-list {
+  width: 900px;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .logout {
+    right: 1rem;
+    width: 5rem;
+  }
+
+  .createButtonDiv a:link,
+  a:visited {
+    right: 1rem;
+    width: 9rem;
+    height: 30px;
+    top: 92px;
+    right: 5%;
+  }
+}
+
+@media (device-width: 428px) {
+  .logout {
+    top: 5%;
+    right: 0;
+  }
+  .createButtonDiv a:link,
+  a:visited {
+    top: 92px;
+    right: 5%;
+  }
+  .crop-list-margin {
+    margin-top: 120px !important;
+  }
+  .crop-growth-btn {
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 90%;
+  }
+  .cropListCard {
+    width: 100%;
+  }
+  .cropListCardValTd {
+    padding-right: 0px;
+    
+  }
+}
+
+.grey.form-control {
+  color: rgb(108,117,125);
+}
+
+.dropDown.form-control {
+  box-shadow: inset 0 3px 6px rgb(0 0 0 / 10%);
+}

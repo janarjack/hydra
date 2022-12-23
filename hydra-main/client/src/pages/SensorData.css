@@ -1,0 +1,31 @@
+.tableline0:nth-of-type(odd) {
+    background: #C8E3E3;
+}
+
+.tableline0:nth-of-type(even) {
+    background: #E2F0F0 
+}
+
+.tableline1:nth-of-type(odd) {
+    background: #F3DBC7;
+}
+
+.tableline1:nth-of-type(even) {
+    background: #F9ECE2 ;
+}
+
+.tableline2:nth-of-type(odd) {
+    background: #F0E2E3;
+}
+
+.tableline2:nth-of-type(even) {
+    background: #F8F2F2;
+}
+
+.tableline3:nth-of-type(odd) {
+    background: #C2D7BD;
+}
+
+.tableline3:nth-of-type(even) {
+    background: #DCE8D9;
+}

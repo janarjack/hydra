@@ -1,0 +1,224 @@
+table.account:nth-of-type(odd) {
+  background: #CCE4EB;
+}
+
+table.account:nth-of-type(even) {
+  background: #F3DBC7;
+}
+
+table.account.action:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table.account { 
+    width: 100%; 
+    border-collapse: collapse;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  /* Zebra striping */
+  tr.account:nth-of-type(odd) { 
+    background: white;
+  }
+  th.account { 
+    background: #99C5D1; 
+    color: white;
+    font-weight: bold;
+    
+  }
+  td.account, th.account { 
+    padding: 8px 6px; 
+    text-align: left;
+    width: 140px;
+    font-size: 14px;
+  }
+
+  td.account {
+    color: #353b40;
+  }
+
+  /* top-left border-radius */
+  table tr.account:first-child th.account:first-child {
+    border-top-left-radius: 6px;
+  }
+  
+  /* top-right border-radius */
+  table tr.account:first-child th.account:last-child {
+    border-top-right-radius: 6px;
+  }
+  
+  /* bottom-left border-radius */
+  table tr.account:last-child td.account:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  
+  /* bottom-right border-radius */
+  table tr.account:last-child td.account:last-child {
+    border-bottom-right-radius: 6px;
+  }
+
+
+
+  /* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+	table.account, thead, tbody, th.account, td.account, tr.account { 
+		display: block;
+    width: 100%;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr.account { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr.account { border: 1px solid #ccc; }
+	
+	td.account { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+    width: 300px;
+	}
+	
+	td.account:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 100%;
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td.account:nth-of-type(1):before { content: "Name"; }
+	td.account:nth-of-type(2):before { content: "Email"; }
+	td.account:nth-of-type(3):before { content: "Role"; }
+	td.account:nth-of-type(4):before { content: "Actions"; }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+@media (max-width: 700px) {
+  .switch {
+    width: 36px;
+    height: 18px;
+  }
+  .slider:before {
+    height: 16px;
+    width: 16px;
+    left: 0px;
+    bottom: 1px;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+a:visited {
+  background-color: #92de8b !important;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #92de8b;
+  padding: 1px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  right: 2rem;
+  height: 2rem;
+  width: 8.6rem;
+  border-radius: 16px;
+  vertical-align: middle !important;
+  border: 1px solid transparent;
+}
+
+.createButtonDiv a:hover,
+a:active {
+  opacity: .8;
+  color: #fff;
+  border-color: #ccc;
+}

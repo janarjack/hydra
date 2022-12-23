@@ -1,0 +1,69 @@
+body {
+    font-size: 10px;
+}
+
+.sample {
+    margin-top: 16em;
+    background-color: #FFFDDB; 
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    width: 78em;
+}
+
+.text-bad {
+    font-size: 1.75em;
+    font-style: italic;
+}
+
+.header {
+    border: 0.625em solid black;
+    height: 26em;
+}
+
+
+.didYouKnow{
+    font-size: 2.625em;
+    font-weight: bold;
+    margin-bottom: 0.3125em;
+    margin-top: 1.25em;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.values{
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+}
+
+#divToPrint{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.icons {
+    display: inline-block;
+    justify-content: center;
+    align-items: center
+}
+
+.icons div{
+    display: inline-block
+}
+
+.ml-5 {
+    margin-left: 0.3125em;
+}
+
+.icon-container {
+    display: inline-block;
+    margin: 3.5em 0em;
+    text-align: center;
+    width: 100%;
+}
+
+.ml-20 {
+    margin-left: 9.735em ;
+}

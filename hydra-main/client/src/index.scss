@@ -1,0 +1,415 @@
+// login & forget screen
+.login-screen,.forget-screen {
+    h1 {
+        font-family: 'Mukta-Bold';
+        font-size: 28px;
+    }
+    h6 {
+        font-family: 'Mukta-SemiBold';
+        font-size: 18px;
+    }
+    .MuiBox-root {
+        width: 100%;
+    }
+    .MuiOutlinedInput-input {
+        background-color: #e8f0fe;
+        color: #929292 !important;
+        font-size: 14px;
+    }
+    label {
+        color: #929292 !important;
+        font-size: 14px;
+        &.Mui-focused {
+            color: #929292 !important;
+        }
+    }
+    .Mui-focused {
+        color: #929292 !important;
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #92DE8B !important;
+        }
+    }
+    .logo {
+        justify-content: flex-end !important;
+        img {
+            height: 46px;
+            margin-bottom: 10px;
+        }
+    }
+    .MuiLink-root {
+        text-decoration: none;
+        font-family: 'Mukta-Regular';
+        &:hover {
+            color: #92de8b;
+        }
+    }
+    .btn-submit {
+        background-color: #92de8b;
+        border-radius: 14px;
+        height: 46px;
+        font-family: 'Mukta-Regular';
+        &:hover {
+            background-color: #92de8b;
+            cursor: pointer;
+        }
+    }
+}
+
+.createButtonDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 10px 0;
+    letter-spacing: 0.1rem;
+    a:link,
+    a:visited {
+        background-color: #92de8b !important;
+        color: #fff;
+        font-weight: bold;
+        border: 2px solid #92de8b;
+        padding: 1px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        right: 2rem;
+        height: 2rem;
+        width: 8.6rem;
+        border-radius: 16px;
+        vertical-align: middle !important;
+        border: 1px solid transparent;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+    a:hover,
+    a:active {
+        opacity: .8;
+        color: #fff;
+        border-color: #e5e5e5;
+    }
+
+  }
+
+  .cancelBtn {
+    a:link,
+    a:visited {
+      color:#929292;
+      font-weight: bold;
+      padding: 1px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    //   width: 8.2rem;
+      height: 2.3rem;
+      line-height: 2;
+      border-radius: 25px;
+      vertical-align: middle !important;
+      border: 1px solid transparent;
+    }
+    a:hover,
+    a:active {
+    opacity: .8;
+    color: #929292;
+    border-color: #92DE8B;
+    }
+  }
+
+// mobile screen
+@media only screen and (max-device-width: 767px){ 
+    .hydr-top-bar {
+        margin-left: 54px;
+        margin-bottom: 4px;
+    }
+    // user list search box & user form
+    .user-search, .user-form {
+        .MuiOutlinedInput-input {
+        background-color: #fff;
+        padding: 12px 14px;
+        }
+        label {
+        color: #929292 !important;
+        font-size: 14px;
+            &.Mui-focused {
+                color: #929292 !important;
+            }
+        }
+        .Mui-focused {
+        color: #929292 !important;
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #92DE8B !important;
+        }
+        }
+        .MuiOutlinedInput-input {
+            color: #929292 !important;
+            font-size: 14px;
+        }
+    }
+
+     // create, update-user
+     .user-form,.update-user {
+        .MuiFormControl-root {
+            margin-top: 14px;
+            width: 98%;
+        }
+        .toggle-btns {
+            label{
+                border: 1px solid transparent;
+                .card-input {
+                    color: #909090;
+                }
+                &.active {
+                    border-color:#92de8b;
+                    box-shadow: 0px -1px 0px #92de8b;
+                    .card-input {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    // create / edit plant image upload
+    .upload-photo {
+        margin-top: 14px;
+        border: 1px solid #99c5d1;
+        border-radius: 4px;
+        width: 190px;
+        height: 170px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-flow: column;
+        .upload-wrapper {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+            p {
+                margin-bottom: 0;
+               &:first-child {
+                margin-bottom: 6px;
+               }
+                &.icon {
+                    .MuiSvgIcon-root {
+                        font-size: 34px !important; 
+                    }
+                }
+                &.up-label {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #99c5d1;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+                border-color: #92de8b;
+            }
+        }
+       .previewImg {
+            position: relative;
+            img {
+                width: 190px;
+                height: 170px;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+            .up-label {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #fff;
+                background-color: #000000A3;
+                width: 100%;
+                margin: 0;
+                height: 40px;
+                padding-top: 10px;
+                display: none;
+            }
+            &:hover {
+                opacity: .7;
+                img {
+                    cursor: pointer;
+                }
+                .up-label { 
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+       }
+    }
+    
+}
+
+// tab & desktop screen
+@media only screen and (min-device-width: 768px){ 
+    .main-section {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 50px);
+    }
+    // Dashboard screen
+    .hydr-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 52px;
+        padding-right: 18px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        border-bottom: 1px solid #f0f0f0;
+        .logout-btn {
+            font-weight: bold;
+            font-size: 12px;
+            color: #909090;
+            background-color: #e5e5e5;
+            border-radius: 25px;
+            border-style: none;
+            display: inline-block;
+            width: 90px;
+            height: 24px;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            &:hover {
+                border-color: #92DE8B;
+                opacity: .8;
+            }
+        }
+    }
+    // user list search box & create, update-user form
+    .user-search, .user-form,.update-user {
+        .MuiFormControl-root {
+            margin-top: 14px;
+            width: 94%;
+        }
+        .MuiOutlinedInput-input {
+            background-color: #fff;
+            padding: 12px 14px;
+          }
+          label {
+            color: #929292 !important;
+            font-size: 14px;
+            &.Mui-focused {
+                color: #929292 !important;
+            }
+          }
+          .Mui-focused {
+            color: #929292 !important;
+            .MuiOutlinedInput-notchedOutline {
+                border-color: #92DE8B !important;
+            }
+          }
+          .MuiOutlinedInput-input {
+            color: #929292 !important;
+            font-size: 14px;
+          }
+    }
+
+    // create, update-user form 
+    .user-form,.update-user {
+        .toggle-btns {
+            label{
+                border: 1px solid transparent;
+                .card-input {
+                    color: #909090;
+                }
+                &.active {
+                    border-color:#92de8b;
+                    box-shadow: 0px -1px 0px #92de8b;
+                    .card-input {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .cancelBtn {
+        a:link,
+        a:visited {
+          background-color: #e5e5e5 !important;
+        }
+    }
+
+    // create / edit plant image upload
+    .upload-photo {
+        margin-top: 14px;
+        border: 1px solid #99c5d1;
+        border-radius: 4px;
+        width: 190px;
+        height: 170px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-flow: column;
+        .upload-wrapper {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+            p {
+                margin-bottom: 0;
+               &:first-child {
+                margin-bottom: 6px;
+               }
+                &.icon {
+                    .MuiSvgIcon-root {
+                        font-size: 34px !important; 
+                    }
+                }
+                &.up-label {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #99c5d1;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+                border-color: #92de8b;
+            }
+        }
+       .previewImg {
+            position: relative;
+            img {
+                width: 190px;
+                height: 170px;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+            .up-label {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #fff;
+                background-color: #000000A3;
+                width: 100%;
+                margin: 0;
+                height: 40px;
+                padding-top: 10px;
+                display: none;
+            }
+            &:hover {
+                opacity: .7;
+                img {
+                    cursor: pointer;
+                }
+                .up-label { 
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+       }
+    }
+   
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+

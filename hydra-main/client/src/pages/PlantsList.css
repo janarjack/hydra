@@ -1,0 +1,170 @@
+table.account:nth-of-type(odd) {
+  background: #CCE4EB;
+  width: 140%;
+}
+
+table.account:nth-of-type(even) {
+  background: #F3DBC7;
+  width: 140%;
+}
+table.account.action:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table.dashboard { 
+    width: 100%; 
+    border-collapse: collapse;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 18px;
+  }
+  /* Zebra striping */
+  tr.dashboard:nth-of-type(odd) { 
+    background: #CAE1E7;
+  }
+  tr.dashboard:nth-of-type(even) { 
+    background: #99C5D1;
+  }
+  tr.fullpage:nth-of-type(even) { 
+    background: #CCE4EB;
+  }
+
+  th.dashboard { 
+    background: #99C5D1; 
+    color: white;
+    font-weight: bold;
+  }
+  th.fullpage { 
+    background: #99C5D1; 
+    color: white;
+    font-weight: bold;
+  }
+
+  td.dashboard, th.dashboard { 
+    padding: 8px 6px; 
+    text-align: left;
+    width: 140px;
+    font-size: 12.5px;
+  }
+
+  td.fullpage, th.fullpage { 
+    padding: 10px;
+    text-align: left;
+    width: 15%;
+    font-size: 14px;
+  }
+
+  /* top-left border-radius */
+  table tr.dashboard:first-child th.dashboard:first-child {
+    border-top-left-radius: 6px;
+  }
+  
+  /* top-right border-radius */
+  table tr.dashboard:first-child th.dashboard:last-child {
+    border-top-right-radius: 6px;
+  }
+  
+  /* bottom-left border-radius */
+  table tr.dashboard:last-child td.dashboard:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  
+  /* bottom-right border-radius */
+  table tr.dashboard:last-child td.dashboard:last-child {
+    border-bottom-right-radius: 6px;
+  }
+
+  td.account {
+    color: #353b40;
+  }
+
+  /* top-left border-radius */
+  table tr.fullpage:first-child th.fullpage:first-child {
+    border-top-left-radius: 6px;
+  }
+  
+  /* top-right border-radius */
+  table tr.fullpage:first-child th.fullpage:last-child {
+    border-top-right-radius: 6px;
+  }
+  
+  /* bottom-left border-radius */
+  table tr.fullpage:last-child td.fullpage:first-child {
+    border-bottom-left-radius: 6px;
+  }
+  
+  /* bottom-right border-radius */
+  table tr.fullpage:last-child td.fullpage:last-child {
+    border-bottom-right-radius: 6px;
+  }
+
+  /* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  table.account:nth-of-type(odd) {
+    background: #CCE4EB;
+    width: 100%;
+  }
+  
+  table.account:nth-of-type(even) {
+    background: #F3DBC7;
+    width: 100%;
+  }
+
+    /* Force table to not be like tables anymore */
+	table.dashboard, thead, tbody, th.dashboard, td.dashboard, tr.dashboard { 
+		display: block;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr.dashboard { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr.dashboard { border: 1px solid #ccc; }
+	
+	td.dashboard { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	
+	td.dashboard:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td.dashboard:nth-of-type(1):before { content: "Crops"; }
+	td.dashboard:nth-of-type(2):before { content: "pH"; }
+	td.dashboard:nth-of-type(3):before { content: "EC"; }
+	td.dashboard:nth-of-type(4):before { content: "Optimum DLI"; }
+	td.dashboard:nth-of-type(5):before { content: "Harvest (Days)"; }
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+

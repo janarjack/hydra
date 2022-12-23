@@ -1,0 +1,208 @@
+.g-custom{
+  --bs-gutter-x: 0;
+}
+
+.sdp {
+  width: 90% !important;
+}
+
+.panel-heading {
+  text-align: center;
+}
+
+.nameCard {
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.imgCardDiv {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
+}
+
+.imgCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  .panel-heading {
+    text-align: center;
+  }
+  .nameCard {
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+  .imgCardDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+  }
+
+  .imgCard {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .sdp {
+    width: 100% !important;
+  }
+}
+
+[type="date"] {
+  background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: block;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* custom styles */
+label {
+  display: block;
+}
+
+.form-controlinput {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  width: 190px;
+}
+
+@media (max-width: 428px) {
+  .nameCard {
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+  .imgCardDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+  }
+
+  .imgCard {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .sdp {
+    width: 110% !important;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Progress Bar */
+.stepper-wrapper {
+  font-family: Arial;
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #e7e4e4;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #e7e4e4;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e7e4e4;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #439db5;
+
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #439db5;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+.half-width {
+  position: absolute;
+  left: 0;
+  height: 200%;
+  width: 50%;
+  background-color: white;
+  z-index: 1;
+}
